@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#ececec;
+    font-family:Arial, sans-serif;
+}
+
+.calculator{
+    background:#f2f2f2;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.display{
+    width:320px;
+    height:70px;
+    background:white;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,80px);
+    gap:10px;
+}
+
+button{
+    height:70px;
+    border:none;
+    border-radius:10px;
+    font-size:28px;
+    font-weight:bold;
+    background:white;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+}
+
+.operator{
+    background:black;
+    color:white;
+}
+
+.clear{
+    background:red;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <div class="display"></div>
+
+    <div class="buttons">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">+</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">-</button>
+
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">*</button>
+
+        <button class="clear">C</button>
+        <button>0</button>
+        <button class="operator">=</button>
+        <button class="operator">/</button>
+    </div>
+
+</div>
+
+</body>
+</html>
