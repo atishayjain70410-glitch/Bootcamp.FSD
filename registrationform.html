@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registrationform.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Registration Form</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <select id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+
+    <input type="email" id="email" placeholder="Enter Email">
+
+    <input type="number" id="mobile" placeholder="Enter Mobile">
+
+    <hr>
+
+    <h1 id="showName">NAME</h1>
+    <h2 id="showGender">GENDER</h2>
+    <h3 id="showEmail">EMAIL</h3>
+    <h4 id="showMobile">MOBILE</h4>
+
+    <hr>
+
+    <button onclick="displayName()">NAME</button>
+    <button onclick="displayGender()">GENDER</button>
+    <button onclick="displayEmail()">EMAIL</button>
+    <button onclick="displayMobile()">MOBILE</button>
+    <button onclick="resetForm()">RESET FORM</button>
+    <button onclick="resetDisplay()">RESET DISPLAY</button>
+
+</div>
+
+<script src="registrationform.js"></script>
+
+</body>
+</html>
