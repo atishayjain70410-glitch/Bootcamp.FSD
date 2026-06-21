@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.slideshow{
+    position:relative;
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.slide{
+    display:none;
+    width:100%;
+    height:100%;
+    animation:fade 0.7s;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes fade{
+    from{
+        opacity:0.4;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+#prev,
+#next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    width:50px;
+    height:50px;
+    font-size:28px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:.3s;
+}
+
+#prev:hover,
+#next:hover{
+    background:#000;
+}
+
+#prev{
+    left:15px;
+}
+
+#next{
+    right:15px;
+}
+
+.bottom{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+#playPause{
+    padding:10px 30px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    background:#2196f3;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#playPause:hover{
+    background:#0b7dda;
+}
+
+#counter{
+    font-size:18px;
+    font-weight:bold;
+    color:#444;
+}
+
+#dots{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#bbb;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot:hover{
+    background:#666;
+}
+
+.active{
+    background:#2196f3;
+}
+
+@media(max-width:768px){
+
+    .slideshow{
+        height:350px;
+    }
+
+    #prev,
+    #next{
+        width:40px;
+        height:40px;
+        font-size:22px;
+    }
+
+    #playPause{
+        width:100%;
+    }
+}
+
+@media(max-width:500px){
+
+    .slideshow{
+        height:250px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    #counter{
+        font-size:16px;
+    }
+
+    .dot{
+        width:12px;
+        height:12px;
+    }
+}
